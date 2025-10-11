@@ -2,10 +2,8 @@
 </script>
 
 <template>
-  <div>
-    <h1>My website!</h1>
-    <p>zdarova</p>
-  </div>
+  <div class="bg"></div>
+
 </template>
 
 <style scoped> </style>
