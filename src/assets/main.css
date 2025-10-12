@@ -1,40 +1,127 @@
+/*#app {*/
+/*  max-width: 1280px;*/
+/*  margin: 0 auto;*/
+/*  padding: 2rem;*/
+/*  font-weight: normal;*/
+/*}*/
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
+/*a,*/
+/*.green {*/
+/*  text-decoration: none;*/
+/*  color: hsla(160, 100%, 37%, 1);*/
+/*  transition: 0.4s;*/
+/*  padding: 3px;*/
+/*}*/
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
+/*@media (hover: hover) {*/
+/*  a:hover {*/
+/*    background-color: hsla(160, 100%, 37%, 0.2);*/
+/*  }*/
+/*}*/
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
+/*@media (min-width: 1024px) {*/
+/*  body {*/
+/*    display: flex;*/
+/*    place-items: center;*/
+/*  }*/
 
-@media (min-width: 1024px) {
-  body {
+/*  #app {*/
+/*    display: grid;*/
+/*    grid-template-columns: 1fr 1fr;*/
+/*    padding: 0 2rem;*/
+/*  }*/
+/*}*/
+
+/*#app {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    width: 100%;*/
+/*}*/
+
+body{
+    margin: 0;
+    padding: 0;
     display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "PxPlus IBM VGA8";
 }
 
-.bg{
+.picture{
+
+}
+
+.inner_column{
+    display: grid;
+    width: 1100px;
+    height: 933px;
+    max-width: 90%;
+    background-color: #008080;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bgGif{
     position: fixed;
     inset: 0;
-    background: url('/public/Outer_Space.gif') center / cover no-repeat;
+    background: url("/public/gif/Outer_Space.gif") center / cover no-repeat;
+    filter: brightness(0.3);
+    z-index: -2;
 }
+
+.retro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+}
+
+.retro-btn {
+    font-family: "PxPlus IBM VGA8";
+    font-size: 70px;
+    color: black;
+    background-color: #c0c0c0;
+    border: 15px solid #fff;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+    padding: 30px 100px;
+    box-shadow: inset -5px -5px #808080, inset 5px 5px #ffffff;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.retro-btn:active {
+    border: 10px solid #404040;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    box-shadow: inset 5px 5px #808080, inset -5px -5px #ffffff;
+    transform: translateY(10px);
+    transition: 0.1s;
+    cursor: default;
+}
+
+.title{
+    text-align: center;
+}
+
+@font-face {
+    font-family: "PxPlus IBM VGA8";
+    src: url("public/font/PxPlus_IBM_VGA8.ttf") format("truetype");
+}
+
+
+
