@@ -49,21 +49,28 @@ body{
     font-family: "PxPlus IBM VGA8";
 }
 
-.picture{
-
-}
-
-.inner_column{
+#main_column{
     display: grid;
     width: 1100px;
     height: 933px;
-    max-width: 90%;
-    background-color: #008080;
+    background-color: #061072;
+    color: #fff;
     border-radius: 15px;
     padding: 10px;
 }
 
-.wrapper {
+/*.menu_bar{*/
+/*    background-color: #888;*/
+/*    border: 1px ;*/
+/*    font-size: 12px;*/
+/*}*/
+
+.menu_item {
+    display: block;
+    color: #061072;
+}
+
+#wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,11 +82,11 @@ body{
     margin-bottom: 20px;
 }
 
-.bgGif{
+#bgGif{
     position: fixed;
     inset: 0;
-    background: url("/public/gif/Outer_Space.gif") center / cover no-repeat;
-    filter: brightness(0.3);
+    background: url("/gif/Outer_Space.gif") center / cover no-repeat;
+    filter: brightness(0.4);
     z-index: -2;
 }
 
@@ -87,7 +94,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10px;
+    height: 200px;
 }
 
 .retro-btn {
@@ -102,6 +109,9 @@ body{
     box-shadow: inset -5px -5px #808080, inset 5px 5px #ffffff;
     cursor: pointer;
     transition: 0.1s;
+}
+.retro-btn:hover {
+    box-shadow: 0px 0px 200px rgba(159, 154, 154, 0.47);
 }
 
 .retro-btn:active {
@@ -120,8 +130,31 @@ body{
 
 @font-face {
     font-family: "PxPlus IBM VGA8";
-    src: url("public/font/PxPlus_IBM_VGA8.ttf") format("truetype");
+    src: url("/public/font/PxPlus_IBM_VGA8.ttf") format("truetype");
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

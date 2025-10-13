@@ -1,23 +1,21 @@
 <script setup>
 function playClickSound(){
-  const audio = new Audio("/public/sound/mouse_click.wav");
+  const audio = new Audio("/sound/mouse_click.wav");
   audio.play();
 }
-
-
 </script>
 
 <template>
-  <div class="wrapper">
-    <div class="inner_column">
-      <div class="header">
-        <div class="dvdGif"></div>
-        <h1>neveroyatno original'no</h1>
+  <div id="wrapper">
+    <div id="main_column">
+      <div id="library" class="menu_bar">
+        <span class="menu_item">Library</span>
       </div>
       <div class="retro-container">
         <button class="retro-btn" @click="playClickSound"> Click here</button>
       </div>
-      <div class="bgGif"></div>
+
+      <div id="bgGif"></div>
     </div>
   </div>
 
