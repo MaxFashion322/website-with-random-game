@@ -1,11 +1,30 @@
-<script setup>
-// function playClickSound(){
-//   const audio = new Audio("/sound/mouse_click.wav");
-//   audio.play();
-// }
-const playClickSound = () => new Audio("/sound/mouse_click.wav").play()
-
-
+<script >
+export default {
+  data() {
+    return {
+      games: [],
+      givenGame: null
+    };
+  },
+  mounted() {
+    fetch('/games.json')
+        .then(res => res.json())
+        .then(data => {
+          this.games = data;
+          console.log("Загруженные игры:", this.games);
+        });
+  },
+  methods: {
+    playClickSound(){
+    const audio = new Audio("/sound/mouse_click.wav");
+    audio.play();
+    },
+    getRandomGame(){
+      let index = Math.ceil(Math.random() * this.games.length);
+      this.givenGame = this.games[index];
+    }
+  }
+}
 
 
 </script>
@@ -24,6 +43,7 @@ const playClickSound = () => new Audio("/sound/mouse_click.wav").play()
         <br>
         <br> press the button, maybe it helps 🤔
       </h1>
+
 
       <div class="retro_container">
         <button class="retro_btn" @click="playClickSound"> Click here</button>
